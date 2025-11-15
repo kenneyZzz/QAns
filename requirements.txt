@@ -1,0 +1,36 @@
+# LangChain核心包（升级至1.0+）
+langchain>=1.0.0
+langchain-core>=1.0.0
+langchain-text-splitters>=1.0.0
+langchain-openai>=1.0.0
+langchain-milvus>=0.2.2
+langchain-deepseek>=1.0.0
+langchain-ollama>=1.0.0
+dashscope>=1.25.0
+
+# 向量数据库 Milvus 客户端
+pymilvus>=2.4.0
+
+# 文档加载器依赖
+pypdf>=3.0.0  # PDF文件支持
+docx2txt>=0.8  # Word文档支持
+unstructured>=0.10.0  # Markdown和其他格式支持
+openpyxl>=3.0.0  # Excel文件支持(.xlsx)
+xlrd>=2.0.0  # Excel文件支持(.xls)
+msoffcrypto-tool>=5.4.0  # 处理受保护的Office文件，提供msoffcrypto模块
+
+# 可选：如果需要更好的Markdown支持
+# markdown>=3.4.0
+
+# 数据库 ORM 与 MySQL 驱动
+SQLAlchemy>=2.0.0
+PyMySQL>=1.1.0
+
+# Web 框架
+fastapi>=0.104.0
+
+# 从 .env 加载环境变量
+python-dotenv>=1.0.1
+
+# 日志
+loguru>=0.7.2

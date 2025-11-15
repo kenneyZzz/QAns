@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0.39
+    container_name: qans-mysql
+    restart: "no"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: qans
+      MYSQL_USER: qans
+      MYSQL_PASSWORD: qans123
+    ports:
+      - "3306:3306"
+#    volumes:
+#      - mysql_data:/var/lib/mysql
+#      - ./conf.d:/etc/mysql/conf.d
+#      - ./init-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - mysql-network
+
+volumes:
+  mysql_data:
+
+networks:
+  mysql-network:
+    driver: bridge
