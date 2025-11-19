@@ -24,7 +24,7 @@ QAns是一个基于RAG技术的智能文档问答系统，完整实现了从文�
 
 你可以直接在线观看项目演示及引导视频：
 
-[📹 点击观看演示视频](https://github.com/kenneyZzz/QAns/releases/download/1.0/QAns.mp4)
+https://github.com/kenneyZzz/QAns/releases/download/1.0/QAns.mp4
 
 > 💡 提示：点击上方链接即可下载或在线观看视频（如果浏览器支持）
 
