@@ -32,10 +32,10 @@ def rerank_documents(
             raise ValueError("documents 中的每个 dict 必须包含 'text' 字段且为字符串类型")
         document_texts.append(text)
 
-    # 判断是否为千问模型，使用不同的请求体格式
-    is_qwen_model = settings.rerank_model and "qwen" in settings.rerank_model.lower()
+    # 判断是否为千问API模型，使用不同的请求体格式
+    is_dash_scope = "dashscope" in settings.rerank_url.lower()
 
-    if is_qwen_model:
+    if is_dash_scope:
         payload = {
             "model": settings.rerank_model,
             "input": {
@@ -71,7 +71,7 @@ def rerank_documents(
     if not isinstance(data, Mapping):
         raise RerankError("重排序服务返回了意外的响应结构")
 
-    results = data.get("output").get("results") if is_qwen_model else data.get("results")
+    results = data.get("output").get("results") if is_dash_scope else data.get("results")
     if not isinstance(results, list):
         raise RerankError("重排序服务返回了无效的 results 字段")
 
